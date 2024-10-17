@@ -42,7 +42,16 @@ class Node
 class List
 {
 public:
-List();
+List()
+{
+  
+    headNode=new Node();
+    headNode->setNext(NULL);
+    currentNode=NULL;
+    lastCurrentNode=NULL;
+    size=0;
+};
+
 void add(int addObject);
 int get();
 bool next();
@@ -58,7 +67,7 @@ Node*lastCurrentNode;
 };
 
 // Constructor
-List::List()
+/* List::List()
 {
     headNode=new Node();
     headNode->setNext(NULL);
@@ -66,7 +75,7 @@ List::List()
     lastCurrentNode=NULL;
     size=0;
     
-}
+} */
 
 
 
@@ -124,7 +133,7 @@ void traverse(List list)
 
     for(int i=1; list.next();i++)
     {
-      cout<<"\n Element "<<i<<" "<<list.get();
+      cout<<"\n Element "<<i<<"    "<<list.get();
     }
 
     list.currentNode=savedCurrentNode;
