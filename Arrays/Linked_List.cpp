@@ -64,6 +64,11 @@ Node*headNode;
 Node*currentNode;
 Node*lastCurrentNode;
 
+
+
+
+
+
 };
 
 // Constructor
@@ -111,7 +116,7 @@ int List::get()
 }
 
 // Next class Mehtod
-bool List::next()
+ bool List::next()
 {
     if(currentNode==NULL)  return false;
     lastCurrentNode=currentNode;
@@ -119,7 +124,7 @@ bool List::next()
     if(currentNode==NULL || size==0)
     return false;
     else return true;
-}
+} 
 
 //
 //void
@@ -163,4 +168,7 @@ int main()
 {
         List list= addNodes();
         traverse(list);
+
+
+        return 0;
 }

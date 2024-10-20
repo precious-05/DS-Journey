@@ -6,7 +6,30 @@ using namespace std;
   // For such algorithms good time complexity lies in " nlogn " Such as merge Sort etc
   
 
-void Bubble_Sort(int array[], int n)
+class Sort
+{
+
+public:
+
+ int n=8;
+ int array[8]= {7,2,5,9,10,3,6,1};
+
+
+
+void display_array()
+{
+  cout<<endl<<"The Original Array is: "<<endl;
+   for(int i=0;i<n;i++) 
+   {
+    cout<<array[i]<<" ";
+   }
+   cout<<endl;
+}
+
+
+
+
+void Bubble_Sort()
 {
    bool isSwap=false; // For more optimization of this Bubble Sort
 
@@ -35,22 +58,7 @@ void Bubble_Sort(int array[], int n)
 
 
 
-
-void display_array(int array[], int n)
-{
-  cout<<endl<<"The Original Array is: "<<endl;
-   for(int i=0;i<n;i++) 
-   {
-    cout<<array[i]<<" ";
-   }
-   cout<<endl;
-}
-
-
-
-
-
-void sorted_array(int array[], int n)
+void sorted_array()
 {
     cout<<endl<<"The Sorted Array is: "<<endl;
    for(int i=0;i<n;i++) 
@@ -66,16 +74,31 @@ void sorted_array(int array[], int n)
 
 
 
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 int main()
 {
-  
- int n=8;
- int array[]={7,2,5,9,10,3,6,1};
+  Sort S1;
+  //S1.n=8;
+  //S1.array[8]= {7,2,5,9,10,3,6,1};
 
-
-display_array(array,n);
-Bubble_Sort(array,n);
-sorted_array(array,n);
+  S1.display_array();
+  S1.Bubble_Sort();
+  S1.sorted_array();
 
 
 

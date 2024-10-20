@@ -13,23 +13,6 @@ using namespace std;
 
 
 
-class Node                                                // The Node is not created here just its structure is defined here
-{
- private:
- int data;                                             //Class Members
- Node *next;
- Node *head=NULL;                                    //Head Node
-
-};
-
-
-
-
-
-void insert(int n)                           // The Node is created here actually or insertion of elements is done here 
-{
-  Node *newNode = new Node;                 // new keyword is used for allocating the dynamic memory
-}
 
 
 
@@ -40,10 +23,3 @@ void insert(int n)                           // The Node is created here actuall
 
 
 
-
-int main()
-{
-
-
-    return 0;
-}
