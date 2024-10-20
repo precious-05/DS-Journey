@@ -51,7 +51,8 @@ University()
 //-------------------------------------------Parameterized Constructor----------------------------------------
 University(string department, string subject)
 {
-   (*this).department=department;   //this is used with arrow operator to avoid the confusion of compiler that on left side 
+   (*this).department=department;   //It is another way of writing "this"  but it becomes complex
+                                    //this is used with arrow operator to avoid the confusion of compiler that on left side 
                                     //there is variable name while on the right side there is parameter name (as both have same names)  see  point 1.1
     this-> subject=subject;
     cout<<"Parameterized Constructor of University Class \n"<<endl;
