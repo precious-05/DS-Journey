@@ -117,7 +117,7 @@ int main()
     list.insertAtEnd(30);   // Insert 30
     
     list.display();         // Display the list (expected: 10 -> 20 -> 30 -> nullptr)
-
+                              
     return 0;
 }
 
