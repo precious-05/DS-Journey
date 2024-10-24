@@ -101,6 +101,66 @@ void display()
 }
 
 
+
+void DeleteNode(Node* head)
+{
+   if(head==nullptr)
+   {
+     return;            //If the head is Null then it means that the lit is empty and there is no node in the List
+   }
+
+   if(head->next==nullptr)
+   {
+    delete head;
+    return;
+   }
+
+   Node* temp=head;
+
+   while(temp->next->data!=val)
+   {
+     temp=temp->next;
+   }
+
+   Node* toDelete = temp->next;
+   temp->next=temp->next->next;
+   delete(toDelete);
+
+}
+
+void deleteNodeAtStart(Node* &head, int val)
+{
+   Node* temp=head;
+   head=head->next;
+   delete(temp);
+
+}
+
+
+void deleteAtLast(Node* &head, int val)
+{
+  Node*temp=head;
+  if(head==nullptr)
+  {
+    return;
+  }
+  
+  if(head->next==nullptr)
+  {
+    delete head;
+    return;
+  }
+
+  while(temp->next->next!=nullptr)
+  {
+    temp=temp->next;
+  }
+
+  delete(temp->next);
+  temp->next=nullptr;
+}
+
+
 };
 
 
@@ -115,9 +175,8 @@ int main()
     list.insertAtEnd(10);   // Insert 10
     list.insertAtEnd(20);   // Insert 20
     list.insertAtEnd(30);   // Insert 30
-    
-    list.display();         // Display the list (expected: 10 -> 20 -> 30 -> nullptr)
-                              
+
+    list.display();         // Display the list (expected: 10 -> 20 -> 30 -> nullptr)                        
     return 0;
 }
 
